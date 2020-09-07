@@ -1,0 +1,30 @@
+{
+  "name": "hw-13-burgerapp",
+  "version": "1.0.0",
+  "description": "Web app utilizing server, database, and express handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logantwalker/HW-13-BurgerApp.git"
+  },
+  "keywords": [
+    "npm",
+    "install"
+  ],
+  "author": "Logan Walker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/logantwalker/HW-13-BurgerApp/issues"
+  },
+  "homepage": "https://github.com/logantwalker/HW-13-BurgerApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
