@@ -9,3 +9,12 @@ Install dependencies:
  ``` 
  npm i 
  ```
+Seed Database:
+
+```
+cd db/
+mysql -u root -p 
+source schema.sql
+source seeds.sql (optional)
+quit
+```
