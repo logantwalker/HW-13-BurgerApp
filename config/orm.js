@@ -25,6 +25,8 @@ const orm = {
             if (err) throw err;
             cb(res);
         });
+
+        
     },
     update: function(id,cb){
         let queryStr = `UPDATE burgers SET devoured = true WHERE id = ${id}`;
