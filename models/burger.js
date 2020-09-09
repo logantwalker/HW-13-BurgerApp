@@ -7,10 +7,14 @@ const burger = {
         });
     },
     insert: function(newBurger,cb){
-        console.log(newBurger);
         orm.insertOne(newBurger, function(res){
             cb(res)
         })
+    },
+    devour: function(id,cb){
+        orm.update(id,function(res){
+            cb(res);
+        });
     }
 }
 
