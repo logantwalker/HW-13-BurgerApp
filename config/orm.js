@@ -20,7 +20,7 @@ const orm = {
     },
     insertOne: function(newBurger,cb){
         console.log(newBurger);
-        let queryStr = `INSERT INTO burgers VALUE (default,'${newBurger}',false)`
+        let queryStr = `INSERT INTO burgers VALUE (default,'${newBurger}',false,default)`
         connection.query(queryStr, function(err, res) {
             if (err) throw err;
             cb(res);
