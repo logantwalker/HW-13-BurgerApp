@@ -1,42 +1,55 @@
-<h1>Burger App</h1>
-
-<p>Manage Burger with this app</p>
-
-<ol>
-  {{#each burger}}
-  {{#unless devoured}}
-      <li>
-      <p><span class="label">Name:</span> {{this.burger_name}}</p>
-      <p><span class="label">Devoured:</span> {{this.devoured}}</p>
-
-      <button data-id="{{this.id}}" class="devour">Devour It!</button>
-  	</li>
-  {{/unless}}
-  	
-  {{/each}}
-</ol>
-
-<h2>Devoured Burgers</h2>
-
-<ol>
-  {{#each burger}}
-  {{#if devoured}}
-      <li>
-      <p><span class="label">Name:</span> {{this.burger_name}}</p>
-      <p><span class="label">Devoured:</span> {{this.devoured}}</p>
-  	</li>
-  {{/if}}
-  	
-  {{/each}}
-</ol>
-
-<h2>Add a Burger</h2>
-
-<form class="add_burger">
-
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="add_burger" name="burger_name">
-    <span><button type="submit">Add Burger</button></span>
+<nav>
+  <div class="nav-wrapper purple darken-4">
+    <a style='padding-left:5%' href="#" class="brand-logo">Eat Da Burger</a>
   </div>
-</form>
+</nav>
+
+<div class='row'>
+  <div id='curr' class='col left'>
+    <h3>Current Burgers</h3>
+    <ol>
+      {{#each burger}}
+      {{#unless devoured}}
+      <li>
+        <p><span class="label">Name:</span> {{this.burger_name}}</p>
+        <button data-id="{{this.id}}" class="devour">Devour It!</button>
+      </li>
+      {{/unless}}
+
+      {{/each}}
+    </ol>
+  </div>
+
+  <div id='dev' class='col right'>
+    <h3>Devoured Burgers</h3>
+    <ol>
+      {{#each burger}}
+      {{#if devoured}}
+      <li>
+        <p><span class="label">Name:</span> {{this.burger_name}}</p>
+      </li>
+      {{/if}}
+
+      {{/each}}
+    </ol>
+  </div>
+</div>
+
+
+
+
+
+<div class='row'>
+  <div id='burger_form' class='col sm-8'>
+    <h2>Add a Burger</h2>
+
+    <form class="add_burger">
+
+      <div class="form-group">
+        <label for="burger">Burger Name:</label>
+        <input type="text" id="add_burger" name="burger_name">
+        <span><button type="submit">Add Burger</button></span>
+      </div>
+    </form>
+  </div>
+</div>
